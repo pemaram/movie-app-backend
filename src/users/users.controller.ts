@@ -13,10 +13,11 @@ import {
 import { UsersService } from './users.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { Prisma } from '@prisma/client';
-import { ApiBody, ApiQuery } from '@nestjs/swagger';
+import { ApiBody, ApiQuery, ApiTags } from '@nestjs/swagger';
 import { JwtGuard } from 'src/auth/guard/jwt-auth.guard';
 import { PrismaClientKnownRequestError } from '@prisma/client/runtime/library';
 
+@ApiTags('Users')
 @Controller('web/users')
 export class UsersController {
   constructor(private readonly usersService: UsersService) {}

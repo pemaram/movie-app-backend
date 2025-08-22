@@ -14,10 +14,11 @@ import {
 import { MoviesService } from './movies.service';
 import { PrismaClientKnownRequestError } from '@prisma/client/runtime/library';
 import { UpsertMovieDTO } from './dto/create-movie.dto';
-import { ApiQuery } from '@nestjs/swagger';
+import { ApiQuery, ApiTags } from '@nestjs/swagger';
 import { UploadImage } from 'src/upload-logic/upload-image.decorator';
 import { JwtGuard } from 'src/auth/guard/jwt-auth.guard';
 
+@ApiTags('Movies')
 @Controller('web/movies')
 export class MoviesController {
   constructor(private readonly moviesService: MoviesService) {}

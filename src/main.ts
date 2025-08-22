@@ -18,8 +18,10 @@ async function bootstrap() {
   });
 
   const config = new DocumentBuilder()
-    .setTitle('Your API')
-    .setDescription('API docs')
+    .setTitle('Movie App Backend API')
+    .setDescription(
+      'This API provides endpoints for user authentication, movie management, and other core functionalities of the Movie App. Use these endpoints to handle login, display movies with pagination, and add new movies.'
+    )
     .setVersion('1.0')
     .addBearerAuth(
       {

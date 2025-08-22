@@ -11,10 +11,11 @@ import {
 import { AuthService } from './auth.service';
 import { LocalAuthGuard } from './guard/local-auth.guard';
 import { RefreshJwtGuard } from './guard/refresh-jwt-auth.guard';
-import { ApiBody } from '@nestjs/swagger';
+import { ApiBody, ApiTags } from '@nestjs/swagger';
 import { LoginDTO } from 'src/users/dto/create-user.dto';
 import { RefreshJwtTokenDTO } from './dto/create-auth.dto';
 
+@ApiTags('Auth')
 @Controller('auth')
 export class AuthController {
   constructor(private readonly authService: AuthService) { }
