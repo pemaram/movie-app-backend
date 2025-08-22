@@ -37,7 +37,7 @@ async function bootstrap() {
   SwaggerModule.setup('api', app, document);
 
   app.enableCors({
-    origin: ["https://movie-frontend-app.vercel.app/"],
+    origin: ["https://movie-app-frontend-h8iij1jlm-pemaram-siravis-projects-c627576f.vercel.app/"],
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization', 'Cookie'],
